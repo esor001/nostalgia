@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    transition: background 1s;
+    overflow: hidden;
+     margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+img {
+    max-width:100%;
+}
+
+
+.flex {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow:hidden;
+}
+
+.img1 {
+    max-width:100%;
+    animation: move 5s infinite;
+}
+.img2 {
+    max-width:100%;
+    animation: pulse 1s infinite alternate;
+}
+.img3 {
+    max-width:100%;
+    animation: spin 10s infinite linear;
+}
+.planet {
+    max-width:100%;
+    animation: shake 1s infinite alternate ease-out;
+}
+
+@keyframes spin {
+    0%{
+        transform:rotate(0);
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+@keyframes pulse {
+    0% {
+        transform:scale(1);
+        opacity:0;
+    }
+    100% {
+        transform:scale(1.5);
+        opacity:2;
+    }
+}
+@keyframes boom {
+    0% {
+        transform:scale(1);
+        opacity:1;
+    }
+    100% {
+        transform:scale(1.5);
+        opacity:0;
+    }
+}
+@keyframes move {
+    0% {
+        transform:translateX(110vw);
+        
+    }
+    100% {
+        transform:translateX(-16vw)
+    }
+}
+@keyframes shake {
+    0% {
+        transform:translateX(3vw);  
+    }
+    100% {
+        transform:translateX(-3vw)
+    }
+}
+@media screen and (min-width:1201px) and (max-width:2000px) 
+and (min-height:601px)
+{
+    .img1{
+        width:50vw;
+        }
+    .img2{
+        display:none;
+        }
+    .img3{
+        display:none;
+        }
+    .planet{
+        display:none;
+        }
+}
+
+@media screen and (min-width:801px) and (max-width:1200px) and (min-height:600px)
+{
+    .img1{
+        display:none;
+        }
+    .img2{
+        display:none;
+        }
+    .img3{
+        display:none;
+        }
+    .planet{
+        width:30vw;
+        }
+}
+
+@media screen and (min-width:601px) and (max-width:800px) and (min-height:400px)
+{
+    .img1{
+        display:none;
+        }
+    .img2{
+        width:40vw;
+        }
+    .img3{
+        display:none;
+        }
+        .planet{
+            display:none;
+            }
+}
+
+@media screen and (max-width:600px)
+ and (min-height:200px) 
+{
+    .img1{
+        display:none;
+        }
+    .img2{
+        display:none;
+        }
+    .img3{
+        width:60vw;
+        animation: boom 1s infinite alternate;
+    }
+    .planet{
+        display:none;
+        }
+}
+
+@media screen and (max-width:500px) and (min-height:100px) {
+    img {
+        display:none;
+    }
+}
