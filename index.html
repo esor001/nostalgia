@@ -1,12 +1,32 @@
 <!doctype html>
 <html>
 <head>
-        <title>galaxy</title>
+        <title>nostalgia city</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="main.css">
          <style>
         body {
-          background-image: url('galaxy5.gif');
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 1s ease;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        }
+        .morning {
+        background-image: url('morning.jpg'); /* path to morning image */
+        }
+
+        .afternoon {
+        background-image: url('afternoon.jpg'); /* path to afternoon image */
+        }
+
+        .evening {
+        background-image: url('nostalgiacity1.gif'); /* path to evening image */
         }
      </style>
 </head>
@@ -15,19 +35,35 @@
         <div class="flex">
                 <main>
                 <div class="box">
-                        <img src="ufo.png"> 
+                         
                 </div>
                 <div class="box">
-                        <img src="planet.png">
+                       
                 </div>
                 <div class="box">
-                        <img src="ufowplanet.png">
+                       
                 </div>
                 <div class="img3">
-                        <img src="boom.png">
+                      
                 </div>
                 </main>
-        </div>        
+        </div>    
 
+<script>
+        // Get the current hour
+        var currentHour = new Date().getHours();
+              
+        // Get the body element
+        var body = document.body;
+              
+        // Set different classes based on the time of day
+        if (currentHour >= 5 && currentHour < 12) {
+                body.classList.add("morning");
+        } else if (currentHour >= 12 && currentHour < 18) {
+                body.classList.add("afternoon");
+        } else {
+                body.classList.add("evening");
+        }
+              </script>
 </body>
 </html>
