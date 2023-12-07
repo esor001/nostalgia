@@ -48,14 +48,23 @@ img {
 }
 
 .upper-item {
-    background: rgba(255, 255, 255, 0.143);
+    background: rgba(0, 0, 0, 0.252);
+    display: flex;
     width:100%;
     opacity: 0;
+    justify-content: center;
     align-items: center;
+}
+
+.center {
+    background: rgba(255, 255, 214, 0.035);
+    width:10%;
+    height:10%;
 }
 
 .upper-item:hover {
     opacity: 100%;
+    transition: .5s;
 }
 
 .flex {
