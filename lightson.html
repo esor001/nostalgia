@@ -14,9 +14,107 @@
         align-items: center;
         justify-content: center;
         transition: background 1s ease;
-        background-image: url('nostalgiacity2.gif');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         }
+        .morning {
+        background-image: url('nostalgiacity1.gif'); /* path to morning image */
+        }
 
+        .afternoon {
+        background-image: url('nostalgiacity2.gif'); /* path to afternoon image */
+        }
+
+        .evening {
+        background-image: url('nostalgiacity1.gif'); /* path to evening image */
+        }
+
+        .box {
+            flex: 1;
+            min-width: 30%; /* Adjust as needed */
+            max-width: 33%;
+            box-sizing: border-box;
+            /* border: 1px solid #ccc; */
+            margin: 8px; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            color: white; /* Set the text color to white */
+        }
+
+        .box:hover {
+            /* box-shadow: 0 0 10px rgba(255, 242, 169, 0.7); Add a glowing effect on hover */
+            text-shadow: 0 0 12px rgba(255, 242, 169, 0.749);
+        }
+
+        .center-box {
+            flex-basis: 60%;
+        }
+
+     </style>
+</head>
+
+<body>
+    <div class="flex">
+        <main>
+            <div class="main-container">
+                <div class="upper">
+                    <div class="upper-item"></div>
+                    <div class="upper-item">
+                        <!-- <div class="center"> -->
+                        <div class="box">&#9650;</div> <!-- Top -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="upper-item"></div>
+                </div>
+
+                <div class="upper">
+                    <div class="upper-item">
+                        <!-- <div class="center"> -->
+                        <div class="box">&#9668;</div> <!-- Left -->
+                    </div>
+                    <div class="upper-item">
+                        <a href="index.html">
+                            <div class="box">&#8226;</div><!-- Center -->
+                        </a>
+                    </div>
+                    <div class="upper-item">
+                        <div class="box">&#9658;</div> <!-- Right -->
+                    </div>
+                </div>
+
+                <div class="upper">
+                    <div class="upper-item"></div>
+                    <div class="upper-item">
+                        <div class="box">&#9660;</div> <!-- Bottom -->
+                    </div>
+                    <div class="upper-item"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+  
+
+<script>
+        // Get the current hour
+        var currentHour = new Date().getHours();
+              
+        // Get the body element
+        var body = document.body;
+              
+        // Set different classes based on the time of day
+        if (currentHour >= 5 && currentHour < 12) {
+                body.classList.add("morning");
+        } else if (currentHour >= 12 && currentHour < 18) {
+                body.classList.add("afternoon");
+        } else {
+                body.classList.add("evening");
+        }
+              </script>
+</body>
+</html>
