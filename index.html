@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
         <title>nostalgia city</title>
@@ -6,28 +6,28 @@
         <link rel="stylesheet" href="main.css">
          <style>
         body {
-        margin: 0;
-        padding: 0;
-        height: 100vh;
-        flex-wrap: wrap;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background 1s ease;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 1s ease;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         .morning {
-        background-image: url('morning.jpg'); /* path to morning image */
+            background-image: url('nostalgiacity1.gif'); /* path to morning image */
         }
 
         .afternoon {
-        background-image: url('nostalgiacity2.gif'); /* path to afternoon image */
+            background-image: url('nostalgiacity2.gif'); /* path to afternoon image */
         }
 
         .evening {
-        background-image: url('nostalgiacity1.gif'); /* path to evening image */
+            background-image: url('nostalgiacity1.gif'); /* path to evening image */
         }
 
         .box {
@@ -55,10 +55,33 @@
             flex-basis: 60%;
         }
 
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                filter: blur(0);
+                opacity: 1;
+            }
+            to {
+                filter: blur(20px);
+                opacity: 0;
+            }
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nostalgiacity1.gif'); /* Initial background image */
+            background-size: cover;
+            animation: fadeIn 7s ease-in-out forwards;
+        }
      </style>
 </head>
 
 <body>
+        <div class="background"></div>
         <div class="flex">
             <main>
                 <div class="main-container">
@@ -115,6 +138,6 @@
         } else {
                 body.classList.add("evening");
         }
-              </script>
+</script>
 </body>
 </html>
