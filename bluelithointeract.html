@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mosaic Effect</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-image: url('bllq.gif'); /* Replace 'bl75.png' with your actual image path */
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 90%; /* Adjust the width as needed */
+      max-width: 800px; /* Adjust the maximum width as needed */
+      height: 90%; /* Adjust the height as needed */
+      max-height: 800px; /* Adjust the maximum height as needed */
+    }
+
+    .box {
+      flex: 1 0 auto;
+      width: calc(100% / 10);
+      height: calc(100% / 10);
+      background-color: transparent;
+      border: 1px solid #000;
+      transition: background-color 0.3s ease;
+    }
+
+    .box.white {
+      background-color: white;
+    }
+
+    .box:hover:not(.white) {
+      background-color: white;
+    }
+
+    .box.white:hover {
+      background-color: transparent;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Boxes will be generated dynamically using JavaScript -->
+  </div>
+</body>
+</html>

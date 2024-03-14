@@ -1,0 +1,46 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .background-image {
+    background-color: #ffffff; /* Default background color */
+    background-image: url('bl75.png'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw; /* Full width of the viewport */
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .box {
+    width: calc(100% / 10); /* 10 boxes in a row */
+    height: calc(100% / 10); /* 10 boxes in a column */
+    background-color: transparent;
+    border: 1px solid #000; /* Adjust border properties as needed */
+    transition: background-color 0.3s ease;
+  }
+  
+  .box.white {
+    background-color: white;
+  }
+  
+  .box:hover:not(.white) {
+    background-color: white;
+  }
+  
+  .box.white:hover {
+    background-color: transparent;
+  }
+  
