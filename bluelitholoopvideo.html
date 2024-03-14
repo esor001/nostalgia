@@ -3,7 +3,7 @@
 <head>
         <title>nostalgia city</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="style.css">
          <style>
         body {
         margin: 0;
@@ -26,7 +26,7 @@
             max-width: 33%;
             box-sizing: border-box;
             /* border: 1px solid #ccc; */
-            margin: 8px; /* Adjust as needed */
+            /* margin: 8px; Adjust as needed */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -38,7 +38,7 @@
 
         .box:hover {
             /* box-shadow: 0 0 10px rgba(255, 242, 169, 0.7); Add a glowing effect on hover */
-            text-shadow: 0 0 12px rgba(255, 242, 169, 0.749);
+            text-shadow: 0 0 12px rgba(169, 215, 255, 0.749);
         }
 
         .center-box {
@@ -90,21 +90,4 @@
 </body>
   
 
-<script>
-    // Get the current hour
-    var currentHour = new Date().getHours();
-          
-    // Get the body element
-    var body = document.body;
-          
-    // Set different classes based on the time of day
-    if (currentHour >= 5 && currentHour < 12) {
-            body.classList.add("morning");
-    } else if (currentHour >= 12 && currentHour < 18) {
-            body.classList.add("afternoon");
-    } else {
-            body.classList.add("evening");
-    }
-          </script>
-</body>
 </html>

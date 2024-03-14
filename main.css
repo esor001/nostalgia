@@ -9,7 +9,9 @@
 .evening:hover {
     opacity: 100%;
 } */
-
+a {
+    text-decoration: none;
+}
 body {
     transition: background 1s;
     overflow: hidden;
