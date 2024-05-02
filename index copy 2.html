@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>nostalgia city</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+         <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            flex-wrap: wrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 1s ease;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            /* font-size: 12px; */
+        }
+        .morning {
+            background-image: url('nostalgiacity1.gif'); /* path to morning image */
+
+        }
+
+        .afternoon {
+            background-image: url('nostalgiacity1.gif'); /* path to afternoon image */
+        }
+
+        .evening {
+            background-image: url('nostalgiacity1.gif'); /* path to evening image */
+        }
+
+        .box {
+            flex: 1;
+            min-width: 3%; /* Adjust as needed */
+            max-width: 100%;
+            box-sizing: border-box;
+            /* border: 1px solid #ccc; */
+            margin: 8px; /* Adjust as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* font-size: 12px; */
+            cursor: pointer;
+            transition: box-shadow 0.3s;
+            color: white; /* Set the text color to white */
+        }
+
+        /* .box:hover { */
+            /* box-shadow: 0 0 10px rgba(255, 242, 169, 0.7); Add a glowing effect on hover */
+            /* text-shadow: 0 0 12px rgba(255, 242, 169, 0.749);
+        } */
+
+        .center-box {
+            flex-basis: 60%;
+        }
+
+        /* Animation */
+        @keyframes fadeIn {
+            from {
+                filter: blur(0);
+                opacity: 1;
+            }
+            to {
+                filter: blur(20px);
+                opacity: 0;
+            }
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('nostalgiacity1.gif'); /* Initial background image */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            animation: fadeIn 5s ease-in-out forwards;
+        }
+     </style>
+</head>
+
+<body>
+        <div class="background"></div>
+        <div class="flex">
+            <main>
+                <div class="main-container">
+                    <div class="upper">
+                        <div class="upper-item"></div>
+                        <div class="upper-item">
+                            <!-- <div class="center"> -->
+                            <div class="box">click the button to start navigating</div> <!-- Top -->
+                            <!-- </div> -->
+                        </div>
+                        <div class="upper-item"></div>
+                    </div>
+    
+                    <div class="upper">
+                        <div class="upper-item">
+                            <!-- <div class="center"> -->
+                            <div class="box">&#9668;</div> <!-- Left -->
+                        </div>
+                        <div class="center-item">
+                            <a href="fadingmemories.html">
+                                <div class="box"><p class="hover-text">nostalgia.city</p><!-- Center -->
+                                </div>
+                            </a>
+                        </div>
+                        <div class="upper-item">
+                            <a href="futureself.html">
+                            <div class="box">&#9658;</div> <!-- Right -->
+                            </a>
+                        </div>
+                    </div>
+    
+                    <div class="upper">
+                        <div class="upper-item"></div>
+                        <div class="upper-item">
+                            <div class="box">&#9660;</div> <!-- Bottom -->
+                        </div>
+                        <div class="upper-item"></div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </body>
+      
+
+<script>
+        // Get the current hour
+        var currentHour = new Date().getHours();
+              
+        // Get the body element
+        var body = document.body;
+              
+        // Set different classes based on the time of day
+        if (currentHour >= 5 && currentHour < 12) {
+                body.classList.add("morning");
+        } else if (currentHour >= 12 && currentHour < 18) {
+                body.classList.add("afternoon");
+        } else {
+                body.classList.add("evening");
+        }
+
+</script>
+</body>
+</html>

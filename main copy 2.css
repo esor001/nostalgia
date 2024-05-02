@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+}
+
+/* .evening {
+    opacity: 0%; 
+}
+
+.evening:hover {
+    opacity: 100%;
+} */
+a {
+    text-decoration: none;
+}
+body {
+    transition: background 1s;
+    overflow: hidden;
+     margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+}
+
+main {
+    display: flex;
+}
+
+img {
+    max-width:100%;
+}
+
+.main-container {
+    /* background:rgba(255, 255, 255, 0.164); */
+    display:flex;
+    flex-direction: column;
+    /* flex-wrap:wrap; */
+    height:100vh;
+    width: 100vw;
+    padding:10px;
+    gap:10px;
+}
+
+.upper {
+    /* background: rgb(219, 122, 122); */
+    display:flex;
+    width:100%;
+    height:33%;
+    gap:10px
+}
+
+.upper-item {
+    background: rgba(0, 0, 0, 0.252);
+    display: flex;
+    width:100%;
+    opacity: 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 12pt;
+}
+
+.upper-item:hover {
+    opacity: 100%;
+    transition: .5s;
+}
+
+.center-item {
+    background: rgba(255, 255, 255, 0);
+    display: flex;
+    width:100%;
+    opacity: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 70pt;
+}
+
+.center-item:hover {
+    color: white; 
+}
+
+.flex {
+    height: 100vh;
+    width: 100vw;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow:hidden;
+}
+
+.hover-text {
+    color: rgba(255, 255, 255, 0.075); /* Initial text color */
+    transition: color 1s; /* Smooth transition for color change */
+}
+
+/* Hover state */
+.hover-text:hover {
+    color: rgb(255, 255, 255); /* Color when hovering */}
