@@ -14,6 +14,7 @@ body {
     background-position: center;
     background-color: rgb(6, 1, 27);
     font-family: 'Jersey 10', sans-serif; /* Use Jersey 10 font */
+    color:white
 }
 
 .background {
@@ -51,10 +52,16 @@ body {
     display: flex; /* Add flex display */
     flex-direction: column;
     justify-content: center; /* Align text horizontally to center */
+    overflow-y: auto;
+    overflow-x: auto;
 }
 
 .box.activated {
     right:0;
+}
+
+.center {
+    text-align: center;
 }
 
 button {
