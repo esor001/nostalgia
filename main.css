@@ -17,6 +17,23 @@ body {
     color:white
 }
 
+.content {
+    position: relative;
+    width: 100vw;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+.menu {
+    position: relative;
+    width: 100vw;
+    z-index: 1;
+    text-align: left;
+    padding: 20px;
+    color: white;
+}
+
 .background {
     position: fixed;
     top: 0;
@@ -54,6 +71,11 @@ body {
     justify-content: center; /* Align text horizontally to center */
     overflow-y: auto;
     overflow-x: auto;
+}
+
+.box a {
+    color: white; /* Set hyperlink color to white */
+    text-decoration: none; /* Remove underline */
 }
 
 .box.activated {
